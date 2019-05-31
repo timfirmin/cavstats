@@ -1,0 +1,11 @@
+﻿
+
+
+CREATE VIEW [dbo].[DuckDiary2007]
+AS
+SELECT top 100 percent 2007 AS [Year], DETAILSbat2007.Opponent, DETAILSbat2007.Name, DETAILSbat2007.HowOut, DETAILSbat2007.ID
+FROM DETAILSbat2007
+WHERE (((DETAILSbat2007.HowOut)<>'not out') AND ((DETAILSbat2007.Score)=0))
+ORDER BY DETAILSbat2007.ID;
+
+

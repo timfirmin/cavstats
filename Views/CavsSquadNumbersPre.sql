@@ -1,0 +1,15 @@
+﻿
+
+
+
+create view [dbo].[CavsSquadNumbersPre]
+as
+SELECT TOP 100 percent DETAILSbatALL.Name, DETAILSbatALL.Year, DETAILSbatALL.ID
+FROM DETAILSbatALL
+GROUP BY DETAILSbatALL.Name, DETAILSbatALL.Year, DETAILSbatALL.ID
+ORDER BY DETAILSbatALL.Year, DETAILSbatALL.ID;
+
+
+
+
+
