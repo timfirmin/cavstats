@@ -1,0 +1,8 @@
+﻿
+CREATE VIEW [dbo].[DuckDiary2019]
+AS
+SELECT top 100 percent 2019 AS [Year], DETAILSbat2019.Opponent, DETAILSbat2019.Name, DETAILSbat2018.HowOut, DETAILSbat2018.ID
+FROM DETAILSbat2019
+WHERE (((DETAILSbat2019.HowOut)<>'not out') AND ((DETAILSbat2019.Score)=0))
+ORDER BY DETAILSbat2019.ID;
+
